@@ -1,0 +1,1624 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#120810" />
+  <title>Radhe Beauty Care | Bridal Makeup Artist in Surat</title>
+  <meta name="description" content="Radhe Beauty Care is a luxury bridal makeup, hair and beauty parlor in Surat, Gujarat. 22+ years of excellence making your day truly magical." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Radhe Beauty Care | Luxury Makeup Artist" />
+  <meta property="og:description" content="Trusted luxury bridal makeup and hair studio in Surat. 22+ years of excellence." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://radhebeautycare.com" />
+  <meta property="og:image" content="https://radhebeautycare.com/images/hero.webp" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ══════════════════════════════════════════════════════════
+       RADHE BEAUTY CARE - DARK LUXURY SYSTEM
+    ══════════════════════════════════════════════════════════ */
+    :root {
+      --bg-base: #120810;
+      --bg-raised: #1C0E17;
+      --bg-card: #27141F;
+      --burgundy: #5A1230;
+      --gold: #D4AF6A;
+      --gold-soft: #EBCF95;
+      --rose: #E8A3B0;
+      --ivory: #F7EDE4;
+      --mauve: #C9B3B8;
+      --border: rgba(212, 175, 106, 0.18);
+      
+      --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.4);
+      --shadow-glow: 0 0 40px rgba(90, 18, 48, 0.4);
+      --transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+      overflow-x: hidden;
+      width: 100%;
+    }
+    
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: var(--mauve);
+      background-color: var(--bg-base);
+      line-height: 1.7;
+      font-size: 16px;
+      overflow-x: hidden;
+      width: 100%;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* Subtle texture overlay for richness */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+      opacity: 0.03;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       TYPOGRAPHY
+    ══════════════════════════════════════════════════════════ */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--ivory);
+      letter-spacing: -0.01em;
+    }
+
+    h1 em, h2 em, h3 em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background-color: var(--gold);
+      margin-right: 16px;
+    }
+
+    .text-ivory { color: var(--ivory); }
+    .text-center { text-align: center; }
+
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    
+    /* Layout */
+    .container {
+      width: min(1240px, 100% - 48px);
+      margin-inline: auto;
+      position: relative;
+      z-index: 2;
+    }
+    .section {
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (max-width: 768px) {
+      .section { padding: 70px 0; }
+    }
+    
+    /* Backgrounds */
+    .bg-base { background-color: var(--bg-base); }
+    .bg-raised { background-color: var(--bg-raised); }
+    .bg-burgundy { background-color: var(--burgundy); }
+    .bg-gradient-course { background: linear-gradient(135deg, var(--burgundy) 0%, #2A0A18 100%); }
+
+    /* Ambient Glows */
+    .glow-radial {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--burgundy) 0%, transparent 70%);
+      opacity: 0.15;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .glow-gold {
+      background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+      opacity: 0.1;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       COMPONENTS (Buttons, Cards)
+    ══════════════════════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 52px;
+      padding: 0 32px;
+      border-radius: 999px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: all var(--transition);
+      cursor: pointer;
+      border: none;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+      color: #120810;
+      box-shadow: 0 8px 24px rgba(212, 175, 106, 0.25);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(212, 175, 106, 0.4);
+    }
+    .btn-secondary {
+      background-color: transparent;
+      border: 1.5px solid var(--gold);
+      color: var(--ivory);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .btn-secondary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: var(--gold-soft);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity var(--transition);
+    }
+    .btn-secondary:hover::before {
+      opacity: 0.1;
+    }
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 175, 106, 0.45);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       NAVIGATION
+    ══════════════════════════════════════════════════════════ */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 90px;
+      z-index: 1000;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid transparent;
+    }
+    header.scrolled {
+      background-color: rgba(18, 8, 16, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: min(1240px, 100% - 48px);
+      margin-inline: auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-mark {
+      width: 56px;
+      height: 56px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      background-color: #fff;
+    }
+    .logo-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .logo:hover .logo-mark { background-color: rgba(212, 175, 106, 0.1); }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: var(--ivory);
+      line-height: 1;
+      letter-spacing: 0.05em;
+    }
+    .logo-sub {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--mauve);
+      margin-top: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+    }
+    .nav-links a {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ivory);
+      opacity: 0.7;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      opacity: 1;
+      color: var(--gold);
+    }
+
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 10px; z-index: 1001; }
+    .hamburger span { display: block; width: 28px; height: 2px; background: var(--ivory); margin: 6px 0; transition: 0.3s; }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+    
+    /* Mobile Menu Drawer */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(18, 8, 16, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 90px;
+      transform: translateX(100%);
+      transition: transform var(--transition);
+    }
+    .mobile-menu.active { transform: translateX(0); }
+    .mobile-menu .mobile-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      color: var(--ivory);
+      margin-bottom: 32px;
+      display: block;
+      transition: color 0.3s;
+    }
+    .mobile-menu .mobile-link:hover { color: var(--gold); }
+
+    /* ══════════════════════════════════════════════════════════
+       HERO SECTION
+    ══════════════════════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 90px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .glow-radial {
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      width: 800px;
+      height: 800px;
+      opacity: 0.2;
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content h1 {
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      margin-bottom: 24px;
+    }
+    .hero-content p {
+      font-size: 18px;
+      color: var(--mauve);
+      margin-bottom: 48px;
+      max-width: 500px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 70px;
+      flex-wrap: wrap;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .stat-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .stat-item p {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--mauve);
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .hero-image {
+      position: relative;
+      padding-right: 20px; /* space for offset outline */
+    }
+    .arch-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+    }
+    .arch-frame {
+      width: 100%;
+      height: 100%;
+      border-radius: 200px 200px 0 0;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+    .arch-outline {
+      position: absolute;
+      top: 24px;
+      right: -24px;
+      bottom: -24px;
+      left: 24px;
+      border: 1px solid var(--gold);
+      border-radius: 200px 200px 0 0;
+      z-index: 1;
+      opacity: 0.5;
+    }
+    .glass-card {
+      position: absolute;
+      bottom: -20px;
+      left: -40px;
+      background: rgba(39, 20, 31, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      z-index: 3;
+      max-width: 280px;
+      box-shadow: var(--shadow-card);
+    }
+    .glass-card strong {
+      display: block;
+      color: var(--ivory);
+      font-size: 16px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .glass-card span {
+      font-size: 14px;
+      color: var(--mauve);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       MARQUEE
+    ══════════════════════════════════════════════════════════ */
+    .marquee-wrapper {
+      padding: 32px 0;
+      overflow: hidden;
+      display: flex;
+      white-space: nowrap;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .marquee-content {
+      display: flex;
+      animation: scrollMarquee 30s linear infinite;
+    }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-style: italic;
+      color: var(--ivory);
+      margin-right: 48px;
+    }
+    .marquee-item::after {
+      content: '◆'; /* diamond */
+      color: var(--gold);
+      font-size: 12px;
+      margin-left: 48px;
+      font-style: normal;
+    }
+    @keyframes scrollMarquee { 
+      0% { transform: translateX(0); } 
+      100% { transform: translateX(-50%); } 
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       SERVICES
+    ══════════════════════════════════════════════════════════ */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 70px;
+    }
+    .service-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .service-img {
+      height: 280px;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, var(--bg-card) 100%);
+      z-index: 1;
+    }
+    .service-card:hover .service-img img {
+      transform: scale(1.06);
+    }
+    .service-img img {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .service-content {
+      padding: 0 32px 40px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      position: relative;
+      z-index: 2;
+      margin-top: -30px;
+    }
+    .service-tag {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 8px;
+      opacity: 0.8;
+    }
+    .service-content h3 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .service-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .pill {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      color: var(--ivory);
+      border-radius: 999px;
+    }
+    .service-desc {
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+    .service-list {
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+    .service-list li {
+      font-size: 15px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+    .service-list li::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background-color: var(--gold);
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+    .service-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s;
+    }
+    .service-link:hover { color: var(--ivory); }
+
+    /* ══════════════════════════════════════════════════════════
+       ABOUT
+    ══════════════════════════════════════════════════════════ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-frame {
+      border-radius: 200px 200px 0 0;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      position: relative;
+      z-index: 2;
+    }
+    .about-outline {
+      position: absolute;
+      top: -24px;
+      left: -24px;
+      right: 24px;
+      bottom: 24px;
+      border: 1px solid var(--gold);
+      border-radius: 200px 200px 0 0;
+      z-index: 1;
+      opacity: 0.4;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: 32px;
+      right: -32px;
+      background: var(--bg-card);
+      border: 1px solid var(--gold);
+      color: var(--ivory);
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+      z-index: 3;
+    }
+    .about-badge span { font-size: 40px; line-height: 1; color: var(--gold); }
+    .about-badge small { font-family: 'Manrope', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ivory); margin-top: 4px; }
+    
+    .about-text h2 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      margin-bottom: 24px;
+    }
+    .about-text p {
+      font-size: 17px;
+      margin-bottom: 48px;
+    }
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .feature-card {
+      padding: 32px 20px;
+      text-align: center;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+    .feature-icon {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto 16px;
+    }
+    .feature-card h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--ivory);
+    }
+    .feature-card p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       PORTFOLIO (Bento Grid)
+    ══════════════════════════════════════════════════════════ */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 320px);
+      gap: 20px;
+      margin-top: 60px;
+    }
+    .bento-item {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .bento-item img {
+      transition: transform var(--transition);
+    }
+    .bento-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(90, 18, 48, 0.7); /* burgundy 70% */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .bento-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(20px);
+      transition: transform var(--transition);
+      margin-bottom: 12px;
+    }
+    .bento-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; }
+    
+    .bento-item:hover img { transform: scale(1.05); }
+    .bento-item:hover .bento-overlay { opacity: 1; }
+    .bento-item:hover .bento-icon { transform: translateY(0); }
+    
+    .bento-1 { grid-column: 1 / 3; grid-row: 1 / 3; }
+    .bento-2 { grid-column: 3 / 4; grid-row: 1 / 2; }
+    .bento-3 { grid-column: 4 / 5; grid-row: 1 / 2; }
+    .bento-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
+    .bento-5 { grid-column: 4 / 5; grid-row: 2 / 3; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(18, 8, 16, 0.98);
+      backdrop-filter: blur(8px);
+      display: none; align-items: center; justify-content: center;
+      padding: 40px;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90%; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: var(--shadow-glow); }
+    .lightbox-close {
+      position: absolute; top: 32px; right: 32px;
+      color: var(--ivory); font-size: 40px; background: none; border: none; cursor: pointer;
+    }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(39, 20, 31, 0.8); border: 1px solid var(--border);
+      width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--gold); transition: var(--transition);
+    }
+    .lightbox-nav:hover { background: var(--gold); color: var(--bg-base); }
+    .lb-prev { left: 40px; }
+    .lb-next { right: 40px; }
+
+    /* ══════════════════════════════════════════════════════════
+       INSTAGRAM CTA
+    ══════════════════════════════════════════════════════════ */
+    .insta-section {
+      text-align: center;
+    }
+    .insta-icon-wrap {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      background: rgba(212, 175, 106, 0.05);
+    }
+    .insta-icon-wrap svg {
+      width: 32px; height: 32px;
+      fill: url(#instaGradient);
+    }
+    .insta-section h2 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      margin-bottom: 32px;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       COURSE (Burgundy)
+    ══════════════════════════════════════════════════════════ */
+    .course-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+    .course-info {
+      padding: 48px;
+      background: rgba(39, 20, 31, 0.4);
+      border: 1px solid rgba(212, 175, 106, 0.1);
+      border-radius: 24px;
+      backdrop-filter: blur(12px);
+    }
+    .course-info h2 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      margin-bottom: 16px;
+    }
+    .course-tiles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .c-tile {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(18, 8, 16, 0.3);
+    }
+    .c-tile h4 { font-family: 'Manrope', sans-serif; font-size: 16px; color: var(--gold); margin-bottom: 6px; font-weight: 600; }
+    .c-tile p { font-size: 14px; margin: 0; color: rgba(247, 237, 228, 0.8); }
+    
+    .course-form {
+      padding: 48px;
+      background-color: var(--ivory); /* The ONE light element */
+      border-radius: 24px;
+      color: var(--bg-base);
+    }
+    .course-form h3 { font-size: 32px; color: var(--bg-base); margin-bottom: 8px; }
+    .course-form p { font-size: 15px; color: #4A4A4A; margin-bottom: 32px; font-weight: 500; }
+    
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--bg-base); }
+    .form-control {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 8px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      background: #FFFFFF;
+      color: var(--bg-base);
+      transition: all 0.3s;
+    }
+    .form-control:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212, 175, 106, 0.2); }
+    textarea.form-control { resize: vertical; min-height: 100px; }
+
+    /* ══════════════════════════════════════════════════════════
+       VISIT & FOOTER
+    ══════════════════════════════════════════════════════════ */
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .visit-card { padding: 56px; }
+    .visit-card h2 { font-size: 36px; margin-bottom: 40px; }
+    .v-row { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+    .v-row:last-child { border: none; margin-bottom: 0; padding-bottom: 0; }
+    .v-label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 12px; }
+    .v-text { font-size: 16px; color: var(--ivory); }
+    
+    .map-container {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 100%;
+      min-height: 450px;
+    }
+    /* Dark Filter for Google Map */
+    .map-container iframe { 
+      width: 100%; height: 100%; display: block; 
+      filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(85%) grayscale(50%);
+    }
+
+    .final-cta { text-align: center; padding: 120px 0; position: relative; overflow: hidden; }
+    .final-cta .glow-radial { top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.2; }
+    .final-cta h2 { font-size: clamp(2.8rem, 6vw, 5.5rem); margin-bottom: 40px; position: relative; z-index: 2;}
+    .final-cta .btn { position: relative; z-index: 2; }
+
+    footer {
+      padding: 60px 0 40px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--ivory); margin-bottom: 20px; letter-spacing: 0.05em; font-weight: 600;}
+    .footer-links { display: flex; justify-content: center; gap: 32px; margin-bottom: 32px; color: var(--ivory); font-weight: 500; font-size: 15px;}
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 13px; color: var(--mauve); }
+
+    /* Floating WhatsApp */
+    .wa-float {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      width: 64px;
+      height: 64px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.3);
+      z-index: 1000;
+      animation: pulse 2.5s infinite;
+      transition: transform 0.3s;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+    .wa-float svg { fill: white; width: 34px; height: 34px; }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       ANIMATIONS (Intersection Observer)
+    ══════════════════════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: 0.15s; }
+    .delay-2 { transition-delay: 0.3s; }
+    .delay-3 { transition-delay: 0.45s; }
+    
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { transition: none; opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+      .marquee-content { animation: none; }
+      .wa-float { animation: none; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       RESPONSIVE DESIGN (Mobile First adjusted max-widths)
+    ══════════════════════════════════════════════════════════ */
+    @media (max-width: 1280px) {
+      .about-grid, .course-grid, .visit-grid { gap: 60px; }
+      .hero-grid { gap: 40px; }
+      .bento-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 300px); }
+      .bento-1 { grid-column: 1 / 3; grid-row: 1 / 2; }
+      .bento-2 { grid-column: 1 / 2; grid-row: 2 / 3; }
+      .bento-3 { grid-column: 2 / 3; grid-row: 2 / 3; }
+      .bento-4 { grid-column: 1 / 2; grid-row: 3 / 4; }
+      .bento-5 { grid-column: 2 / 3; grid-row: 3 / 4; }
+    }
+
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-content { display: flex; flex-direction: column; align-items: center; }
+      .hero .glow-radial { left: 50%; transform: translate(-50%, -50%); }
+      .hero-content p { margin-inline: auto; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .arch-container { max-width: 500px; margin-inline: auto; }
+      .glass-card { left: 50%; transform: translateX(-50%); bottom: -30px; }
+      .course-grid, .visit-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-wrap { max-width: 500px; margin-inline: auto; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-btn { display: none; }
+      .hamburger { display: block; }
+      .logo { gap: 10px; }
+      .logo-mark { width: 44px; height: 44px; }
+      .logo-title { font-size: 15px; }
+      
+      .hero-stats { gap: 24px; }
+      .marquee-item { font-size: 22px; }
+      .marquee-item::after { margin-left: 24px; }
+      
+      .about-badge { width: 100px; height: 100px; right: 0; bottom: 20px; }
+      .about-badge span { font-size: 28px; }
+      .about-badge small { font-size: 10px; }
+      
+      .services-grid { grid-template-columns: 1fr; }
+      .feature-cards { grid-template-columns: 1fr; }
+      .course-tiles { grid-template-columns: 1fr; }
+      .bento-grid { grid-template-columns: 1fr; grid-template-rows: repeat(5, 300px); }
+      .bento-1, .bento-2, .bento-3, .bento-4, .bento-5 { grid-column: 1 / -1; grid-row: auto; }
+      .course-info, .course-form, .visit-card { padding: 32px 24px; }
+      .glass-card { width: 90%; padding: 16px; }
+      .glass-card strong { font-size: 14px; }
+      .glass-card span { font-size: 12px; }
+      
+      .wa-float { bottom: 24px; right: 24px; width: 56px; height: 56px; }
+      .wa-float svg { width: 30px; height: 30px; }
+      .lightbox-nav { display: none; } /* hide arrows on mobile */
+    }
+  </style>
+  
+  <!-- SVG Gradients -->
+  <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+    <linearGradient id="instaGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF6A" />
+      <stop offset="100%" stop-color="#EBCF95" />
+    </linearGradient>
+  </svg>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Radhe Beauty Care",
+    "image": "https://radhebeautycare.com/images/hero.webp",
+    "description": "Luxury Bridal Makeup Artist & Beauty Parlor in Surat.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "G-1, Takshashila apartment Nilam Baug Society, Varachha main road Between hirabaug and circle, Kadodara, Utran",
+      "addressLocality": "Surat",
+      "addressRegion": "Gujarat",
+      "postalCode": "395006",
+      "addressCountry": "IN"
+    },
+    "telephone": "+919887417450",
+    "openingHours": "Mo-Su 09:30-20:30"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════════════════ -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-mark"><img src="images/logo.webp" alt="Radhe Beauty Care Logo"></div>
+        <div class="logo-text">
+          <span class="logo-title">RADHE BEAUTY CARE</span>
+          <span class="logo-sub">by <span style="color:var(--gold); font-weight:700;">Meera Limbani</span></span>
+        </div>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#visit" class="nav-link">Visit</a>
+      </nav>
+      
+      <div class="nav-btn">
+        <a href="https://wa.me/919887417450" target="_blank" class="btn btn-primary">Book Appointment</a>
+      </div>
+
+      <button class="hamburger" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#visit" class="mobile-link">Visit</a>
+    <a href="https://wa.me/919887417450" target="_blank" class="btn btn-primary" style="margin-top:32px;">Book Appointment</a>
+  </div>
+
+  <main>
+    <!-- ══════════════════════════════════════════════════════════
+         HERO SECTION (bg-base + burgundy glow)
+    ══════════════════════════════════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="glow-radial" id="hero-glow"></div>
+      
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Bridal · Glam · Hair · Skin</span>
+          <h1>Making Your Day<br><em>Truly Magical.</em></h1>
+          <p>A high-end Indian bridal studio by <strong style="color: var(--gold); font-size: 1.1em; font-family: 'Cormorant Garamond', serif; letter-spacing: 0.05em;">Meera Limbani</strong>. Experience glowing perfection with Surat's most trusted luxury artist.</p>
+          
+          <div class="hero-actions">
+            <a href="https://wa.me/919887417450" target="_blank" class="btn btn-primary">Book Your Glow</a>
+            <a href="#services" class="btn btn-secondary">Explore Services</a>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>22+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3>5000+</h3>
+              <p>Happy Brides</p>
+            </div>
+            <div class="stat-item">
+              <h3>4.9★</h3>
+              <p>Client Reviews</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image reveal delay-1">
+          <div class="arch-container">
+            <div class="arch-outline"></div>
+            <div class="arch-frame">
+              <img src="images/hero.webp" alt="Bridal portrait by Radhe Beauty Care" loading="eager" />
+            </div>
+            <div class="glass-card">
+              <strong>Surat, Gujarat</strong>
+              <span>Open every day 9:30 AM – 8:30 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         MARQUEE (burgundy)
+    ══════════════════════════════════════════════════════════ -->
+    <div class="bg-burgundy marquee-wrapper">
+      <div class="marquee-content">
+        <!-- Text duplicated for seamless scrolling -->
+        <div class="marquee-item">Bridal Makeup</div>
+        <div class="marquee-item">Glam Makeovers</div>
+        <div class="marquee-item">Hair Styling</div>
+        <div class="marquee-item">Skin Care</div>
+        <div class="marquee-item">HD & Airbrush</div>
+        <div class="marquee-item">Nail Art</div>
+        <div class="marquee-item">Facials</div>
+        <div class="marquee-item">22+ Years Trust</div>
+        
+        <div class="marquee-item">Bridal Makeup</div>
+        <div class="marquee-item">Glam Makeovers</div>
+        <div class="marquee-item">Hair Styling</div>
+        <div class="marquee-item">Skin Care</div>
+        <div class="marquee-item">HD & Airbrush</div>
+        <div class="marquee-item">Nail Art</div>
+        <div class="marquee-item">Facials</div>
+        <div class="marquee-item">22+ Years Trust</div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         SERVICES (bg-base)
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section bg-base" id="services">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="eyebrow">Our Signature Menu</span>
+          <h2>Bespoke <em>Services</em></h2>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="card service-card reveal delay-1">
+            <div class="service-img">
+              <img src="images/facial.webp" alt="Skin Care and Facials" loading="lazy" />
+            </div>
+            <div class="service-content">
+              <span class="service-tag">01</span>
+              <h3>Skin Care & Facials</h3>
+              <div class="service-pills">
+                <span class="pill">Hydra Facial</span>
+                <span class="pill">Glass Skin</span>
+              </div>
+              <p class="service-desc">Achieve radiant, flawless skin with our advanced clinical and editorial facial treatments.</p>
+              <ul class="service-list">
+                <li>Korean Glass Skin Therapy</li>
+                <li>Hydra & Galvanic Facials</li>
+                <li>Chemical Peels & Anti-Tan</li>
+                <li>Bridal Glow Packages</li>
+              </ul>
+              <a href="https://wa.me/919887417450" target="_blank" class="service-link">Enquire via WhatsApp →</a>
+            </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="card service-card reveal delay-2">
+            <div class="service-img">
+              <img src="images/nails.webp" alt="Nail Art and Extensions" loading="lazy" />
+            </div>
+            <div class="service-content">
+              <span class="service-tag">02</span>
+              <h3>Nail Art & Extensions</h3>
+              <div class="service-pills">
+                <span class="pill">Gel Extensions</span>
+                <span class="pill">3D Art</span>
+              </div>
+              <p class="service-desc">Gorgeous, long-lasting nail artistry paired with luxury pedicure rituals for complete pampering.</p>
+              <ul class="service-list">
+                <li>Premium Gel Extensions</li>
+                <li>Bridal 3D Nail Artistry</li>
+                <li>Luxury Potli Pedicure</li>
+                <li>Dead Skin Detox Manicure</li>
+              </ul>
+              <a href="https://wa.me/919887417450" target="_blank" class="service-link">Enquire via WhatsApp →</a>
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="card service-card reveal delay-3">
+            <div class="service-img">
+              <img src="images/spa.webp" alt="Wellness and Body Spa" loading="lazy" />
+            </div>
+            <div class="service-content">
+              <span class="service-tag">03</span>
+              <h3>Wellness & Body Spa</h3>
+              <div class="service-pills">
+                <span class="pill">Body Polish</span>
+                <span class="pill">Shirodhara</span>
+              </div>
+              <p class="service-desc">Authentic wellness rituals to release stress, rejuvenate the body, and bring out your inner radiance.</p>
+              <ul class="service-list">
+                <li>Shirodhara Ayurvedic Therapy</li>
+                <li>Full Body Herbal Polish</li>
+                <li>Anti-Tan De-Pigmentation</li>
+                <li>Relaxing Bridal Massages</li>
+              </ul>
+              <a href="https://wa.me/919887417450" target="_blank" class="service-link">Enquire via WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         ABOUT (bg-raised)
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section bg-raised" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img-wrap reveal">
+            <div class="about-outline"></div>
+            <div class="about-img-frame">
+              <img src="images/bridal.webp" alt="Master Bridal Artist at Radhe Beauty Care" loading="lazy" />
+            </div>
+            <div class="about-badge">
+              <span>22+</span>
+              <small>Years</small>
+            </div>
+          </div>
+          
+          <div class="about-text reveal delay-1">
+            <span class="eyebrow">Our Legacy</span>
+            <h2>22+ Years of <br><em>Making Magic.</em></h2>
+            <p>For over two decades, Radhe Beauty Care has been the sanctuary for women in Surat seeking editorial perfection mixed with traditional grace. Every client is treated as an individual—with bespoke consultations, premium dermatologically-approved products, and a calm, luxurious environment.</p>
+            
+            <div class="feature-cards">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 2L15 9L22 10L17 15L18.5 22L12 18.5L5.5 22L7 15L2 10L9 9L12 2Z"/></svg>
+                </div>
+                <h4>Bridal Expertise</h4>
+                <p>Master artists dedicated to your big day.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><path d="M8 12L11 15L16 9"/></svg>
+                </div>
+                <h4>Premium Quality</h4>
+                <p>Global brands and sterile hygiene.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </div>
+                <h4>Personal Touch</h4>
+                <p>Tailored treatments for unique skin.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         PORTFOLIO (bg-base)
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section bg-base" id="gallery">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="eyebrow">Curated Gallery</span>
+          <h2>The <em>Lookbook</em></h2>
+        </div>
+        
+        <div class="bento-grid">
+          <div class="bento-item bento-1 reveal delay-1" onclick="openLightbox(0)">
+            <img src="images/bridal.webp" alt="Bridal Look" loading="lazy" class="gallery-img" />
+            <div class="bento-overlay">
+              <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            </div>
+          </div>
+          <div class="bento-item bento-2 reveal delay-2" onclick="openLightbox(1)">
+            <img src="images/hair.webp" alt="Hair Styling" loading="lazy" class="gallery-img" />
+            <div class="bento-overlay">
+              <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            </div>
+          </div>
+          <div class="bento-item bento-3 reveal delay-3" onclick="openLightbox(2)">
+            <img src="images/facial.webp" alt="Facial Glow" loading="lazy" class="gallery-img" />
+            <div class="bento-overlay">
+              <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            </div>
+          </div>
+          <div class="bento-item bento-4 reveal delay-1" onclick="openLightbox(3)">
+            <img src="images/nails.webp" alt="Nail Art" loading="lazy" class="gallery-img" />
+            <div class="bento-overlay">
+              <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            </div>
+          </div>
+          <div class="bento-item bento-5 reveal delay-2" onclick="openLightbox(4)">
+            <img src="images/holisticwillness.webp" alt="Spa Wellness" loading="lazy" class="gallery-img" />
+            <div class="bento-overlay">
+              <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <button class="lightbox-nav lb-prev" onclick="changeLightbox(-1)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <img src="" alt="Gallery View" id="lightbox-img" />
+      <button class="lightbox-nav lb-next" onclick="changeLightbox(1)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         INSTAGRAM (bg-raised)
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section bg-raised insta-section reveal">
+      <div class="container">
+        <div class="insta-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </div>
+        <h2>Follow Our <em>Beauty Journey</em></h2>
+        <a href="https://www.instagram.com/radhe_beauty_.care_/" target="_blank" class="btn btn-secondary">
+          @radhe_beauty_.care_
+        </a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         CONTACT (burgundy gradient)
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section bg-gradient-course" id="contact">
+      <div class="container">
+        <div class="course-grid">
+          <div class="course-info reveal">
+            <span class="eyebrow">Get In Touch</span>
+            <h2>Let's Make Magic<br><em>Happen</em></h2>
+            <p>Ready for your glowing transformation? Whether you're booking bridal makeup or an editorial glam session, reach out and our team will get back to you promptly.</p>
+            
+            <div class="course-tiles">
+              <div class="c-tile">
+                <h4>Bridal Consult</h4>
+                <p>Plan your perfect look.</p>
+              </div>
+              <div class="c-tile">
+                <h4>Glam Sessions</h4>
+                <p>For parties & events.</p>
+              </div>
+              <div class="c-tile">
+                <h4>Studio Walk-ins</h4>
+                <p>Visit us anytime.</p>
+              </div>
+              <div class="c-tile">
+                <h4>Fast Responses</h4>
+                <p>We reply promptly.</p>
+              </div>
+            </div>
+            
+            <div style="display:flex;gap:16px;flex-wrap:wrap;">
+              <a href="https://wa.me/919887417450" target="_blank" class="btn btn-primary">Message on WhatsApp</a>
+              <a href="tel:+919887417450" class="btn btn-secondary">Call Directly</a>
+            </div>
+          </div>
+          
+          <!-- The ONE Light Element -->
+          <div class="course-form reveal delay-1">
+            <h3>Book Appointment</h3>
+            <p>Fill out the form and we'll confirm via WhatsApp.</p>
+            
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="name">Your Name</label>
+                <input type="text" id="name" class="form-control" required placeholder="e.g. Priya Sharma" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">WhatsApp Number</label>
+                <input type="tel" id="phone" class="form-control" required placeholder="+91 98765 43210" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="date">Preferred Date (Optional)</label>
+                <input type="date" id="date" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="service">Service Needed</label>
+                <select id="service" class="form-control">
+                  <option value="Bridal Makeup">Bridal Makeup</option>
+                  <option value="Party / Glam Makeup">Party / Glam Makeup</option>
+                  <option value="Hair Styling">Hair Styling</option>
+                  <option value="Skin Care / Facial">Skin Care / Facial</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message (Optional)</label>
+                <textarea id="message" class="form-control" placeholder="Any specific details?"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Send Request via WhatsApp</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         VISIT (bg-base)
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section bg-base" id="visit">
+      <div class="container">
+        <div class="visit-grid">
+          <div class="card visit-card reveal">
+            <h2>Visit the Studio</h2>
+            
+            <div class="v-row">
+              <span class="v-label">Location</span>
+              <p class="v-text">G-1, Takshashila apartment Nilam Baug Society,<br>Varachha main road Between hirabaug and circle,<br>Kadodara, Surat, Gujarat 395006, Utran</p>
+            </div>
+            <div class="v-row">
+              <span class="v-label">Hours</span>
+              <p class="v-text">Monday – Sunday<br>9:30 AM – 8:30 PM (Open all days)</p>
+            </div>
+            <div class="v-row">
+              <span class="v-label">Contact</span>
+              <p class="v-text">+91 98874 17450<br>@radhe_beauty_.care_</p>
+            </div>
+            
+            <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;">
+              <a href="https://wa.me/919887417450" target="_blank" class="btn btn-primary">Book on WhatsApp</a>
+              <a href="tel:+919887417450" class="btn btn-secondary">Call Now</a>
+            </div>
+          </div>
+          
+          <div class="map-container reveal delay-1">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4674!2d72.8711!3d21.2131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEyJzQ3LjIiTiA3MsKwNTInMTYuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         FINAL CTA (bg-base + glow)
+    ══════════════════════════════════════════════════════════ -->
+    <section class="bg-base final-cta reveal">
+      <div class="glow-radial"></div>
+      <div class="container">
+        <h2>Your beauty vision,<br><em>magically realised.</em></h2>
+        <a href="https://wa.me/919887417450" target="_blank" class="btn btn-primary">Start Your Journey</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER (bg-raised)
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="bg-raised">
+    <div class="container">
+      <div class="footer-logo">RADHE BEAUTY CARE</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--gold); margin-top: -16px; margin-bottom: 24px; font-style: italic;">by Meera Limbani</div>
+      <div class="footer-links">
+        <a href="tel:+919887417450">+91 98874 17450</a>
+        <a href="https://www.instagram.com/radhe_beauty_.care_/" target="_blank">Instagram</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Radhe Beauty Care · 22+ Years of Excellence</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919887417450" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.388 0 12.037c0 2.124.553 4.195 1.604 6.01L.526 24l6.103-1.6c1.76.966 3.753 1.477 5.802 1.477 6.645 0 12.03-5.388 12.03-12.037S18.676 0 12.031 0zm0 21.84c-1.795 0-3.553-.483-5.093-1.396l-.365-.216-3.784.992.996-3.69-.237-.377a9.986 9.986 0 0 1-1.526-5.317c0-5.525 4.496-10.021 10.009-10.021 5.512 0 10.007 4.496 10.007 10.02 0 5.525-4.495 10.021-10.007 10.021zm5.503-7.518c-.302-.15-1.785-.88-2.062-.98-.277-.101-.479-.151-.681.151-.202.302-.78 1.002-.957 1.203-.176.201-.353.226-.655.076-1.525-.762-2.73-1.597-3.786-3.21-.212-.323.208-.3.498-.88.076-.151.038-.277-.019-.378-.056-.101-.681-1.637-.933-2.242-.244-.59-.493-.51-.681-.52-.176-.01-.378-.01-.58-.01s-.529.076-.806.377c-.277.302-1.058 1.032-1.058 2.518 0 1.486 1.083 2.922 1.234 3.123.151.202 2.115 3.332 5.176 4.606 1.831.762 2.551.815 3.428.69.756-.107 2.367-.968 2.694-1.9.328-.932.328-1.734.23-1.9-.098-.166-.35-.267-.652-.418z"/></svg>
+  </a>
+
+  <!-- ══════════════════════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════════════════════ -->
+  <script>
+    // Sticky Nav & Active Link Highlight
+    const header = document.getElementById('navbar');
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      // Navbar styling
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      // Scrollspy
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+      
+      // Hero Parallax
+      const heroGlow = document.getElementById('hero-glow');
+      if (heroGlow && window.scrollY < window.innerHeight) {
+        heroGlow.style.transform = `translateY(calc(-50% + ${window.scrollY * 0.2}px))`;
+      }
+    });
+
+    // Mobile Menu
+    const hamburger = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Scroll Reveal (Intersection Observer)
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const service = document.getElementById('service').value;
+        const msg = document.getElementById('message').value;
+
+        const text = `Hello Radhe Beauty Care! ✨\n\nI would like to book an appointment.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Date:* ${date || 'Not specified'}\n*Service:* ${service}\n*Message:* ${msg}`;
+        const waLink = `https://wa.me/919887417450?text=${encodeURIComponent(text)}`;
+        window.open(waLink, '_blank');
+      });
+    }
+
+    // Lightbox System
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const galleryImgs = Array.from(document.querySelectorAll('.gallery-img')).map(img => img.src);
+    let currentImgIndex = 0;
+
+    function openLightbox(index) {
+      currentImgIndex = index;
+      lightboxImg.src = galleryImgs[currentImgIndex];
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    function changeLightbox(dir) {
+      currentImgIndex += dir;
+      if (currentImgIndex < 0) currentImgIndex = galleryImgs.length - 1;
+      if (currentImgIndex >= galleryImgs.length) currentImgIndex = 0;
+      lightboxImg.src = galleryImgs[currentImgIndex];
+    }
+    
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') changeLightbox(-1);
+      if (e.key === 'ArrowRight') changeLightbox(1);
+    });
+  </script>
+</body>
+</html>
