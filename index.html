@@ -965,8 +965,80 @@
       .about-img-wrap { max-width: 500px; margin-inline: auto; }
     }
 
+    /* ══════════════════════════════════════════════════════════
+       PRELOADER
+    ══════════════════════════════════════════════════════════ */
+    .preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background-color: var(--bg-base);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), visibility 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .preloader-logo-wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .preloader-glow {
+      position: absolute;
+      top: -25px;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+      opacity: 0.5;
+      border-radius: 50%;
+      animation: pulse-glow 2s infinite alternate;
+      z-index: 1;
+    }
+    .preloader-logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      position: relative;
+      z-index: 2;
+      animation: float-logo 3s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(212, 175, 106, 0.3);
+      background-color: #fff;
+    }
+    .preloader-text {
+      margin-top: 32px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: var(--ivory);
+      letter-spacing: 0.2em;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      animation: fade-up 1s ease-out forwards 0.5s;
+    }
+    
+    @keyframes pulse-glow {
+      0% { transform: scale(1); opacity: 0.2; }
+      100% { transform: scale(1.5); opacity: 0.6; }
+    }
+    @keyframes float-logo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes fade-up {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
     @media (max-width: 768px) {
       .nav-links, .nav-btn { display: none; }
+
       .hamburger { display: block; }
       .logo { gap: 10px; }
       .logo-mark { width: 44px; height: 44px; }
@@ -1025,6 +1097,17 @@
 </head>
 <body>
 <!-- ══════════════════════════════════════════════════════════
+       PRELOADER
+  ══════════════════════════════════════════════════════════ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-logo-wrap">
+    <div class="preloader-glow"></div>
+    <img alt="Radhe Beauty Care" class="preloader-logo" src="images/logo.webp"/>
+    <div class="preloader-text">RADHE BEAUTY CARE</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
        HEADER
   ══════════════════════════════════════════════════════════ -->
 <header id="navbar">
@@ -1040,7 +1123,7 @@
 <a class="nav-link" href="#services">Services</a>
 <a class="nav-link" href="#about">About</a>
 <a class="nav-link" href="#gallery">Gallery</a>
-<a class="nav-link" href="#contact">Contact</a>
+<a class="nav-link" href="#course">Course</a>
 <a class="nav-link" href="#visit">Visit</a>
 </nav>
 <div class="nav-btn">
@@ -1056,7 +1139,7 @@
 <a class="mobile-link" href="#services">Services</a>
 <a class="mobile-link" href="#about">About</a>
 <a class="mobile-link" href="#gallery">Gallery</a>
-<a class="mobile-link" href="#contact">Contact</a>
+<a class="mobile-link" href="#course">Course</a>
 <a class="mobile-link" href="#visit">Visit</a>
 <a class="btn btn-primary" href="https://wa.me/919687417450?text=Hello!%20I%20have%20a%20query%20about%20this." style="margin-top:32px;" target="_blank">Book Appointment</a>
 </div>
@@ -1323,43 +1406,43 @@
 </div>
 </section>
 <!-- ══════════════════════════════════════════════════════════
-         CONTACT (burgundy gradient)
+         COURSE (burgundy gradient)
     ══════════════════════════════════════════════════════════ -->
-<section class="section bg-gradient-course" id="contact">
+<section class="section bg-gradient-course" id="course">
 <div class="container">
 <div class="course-grid">
 <div class="course-info reveal">
-<span class="eyebrow">Get In Touch</span>
-<h2>Let's Make Magic<br/><em>Happen</em></h2>
-<p>Ready for your glowing transformation? Whether you're booking bridal makeup or an editorial glam session, reach out and our team will get back to you promptly.</p>
+<span class="eyebrow">Radhe Beauty Academy</span>
+<h2>Professional Beauty Parlor<br/><em>Course</em></h2>
+<p>Learn the art of luxury bridal makeup, hair styling, and skin care from Meera Limbani. Start your career in the beauty industry with our comprehensive professional course.</p>
 <div class="course-tiles">
 <div class="c-tile">
-<h4>Bridal Consult</h4>
-<p>Plan your perfect look.</p>
+<h4>Bridal Mastery</h4>
+<p>Learn elite bridal techniques.</p>
 </div>
 <div class="c-tile">
-<h4>Glam Sessions</h4>
-<p>For parties &amp; events.</p>
+<h4>Hair Styling</h4>
+<p>From basics to advanced.</p>
 </div>
 <div class="c-tile">
-<h4>Studio Walk-ins</h4>
-<p>Visit us anytime.</p>
+<h4>Skin &amp; Facials</h4>
+<p>Professional skincare knowledge.</p>
 </div>
 <div class="c-tile">
-<h4>Fast Responses</h4>
-<p>We reply promptly.</p>
+<h4>Certification</h4>
+<p>Get certified by experts.</p>
 </div>
 </div>
 <div style="display:flex;gap:16px;flex-wrap:wrap;">
-<a class="btn btn-primary" href="https://wa.me/919687417450?text=Hello!%20I%20have%20a%20query%20about%20this." target="_blank">Message on WhatsApp</a>
+<a class="btn btn-primary" href="https://wa.me/919687417450?text=Hello!%20I%20want%20to%20know%20the%20price%20and%20details%20for%20the%20Professional%20Beauty%20Parlor%20Course." target="_blank">Inquire Price on WhatsApp</a>
 <a class="btn btn-secondary" href="tel:+919687417450">Call Directly</a>
 </div>
 </div>
 <!-- The ONE Light Element -->
 <div class="course-form reveal delay-1">
-<h3>Book Appointment</h3>
-<p>Fill out the form and we'll confirm via WhatsApp.</p>
-<form id="contactForm">
+<h3>Course Inquiry</h3>
+<p>Fill out the form and we'll send course details and pricing via WhatsApp.</p>
+<form id="courseForm">
 <div class="form-group">
 <label class="form-label" for="name">Your Name</label>
 <input class="form-control" id="name" placeholder="e.g. Priya Sharma" required="" type="text"/>
@@ -1369,24 +1452,18 @@
 <input class="form-control" id="phone" placeholder="+91 98765 43210" required="" type="tel"/>
 </div>
 <div class="form-group">
-<label class="form-label" for="date">Preferred Date (Optional)</label>
-<input class="form-control" id="date" type="date"/>
-</div>
-<div class="form-group">
-<label class="form-label" for="service">Service Needed</label>
-<select class="form-control" id="service">
-<option value="Bridal Makeup">Bridal Makeup</option>
-<option value="Party / Glam Makeup">Party / Glam Makeup</option>
-<option value="Hair Styling">Hair Styling</option>
-<option value="Skin Care / Facial">Skin Care / Facial</option>
-<option value="Other">Other</option>
+<label class="form-label" for="experience">Experience Level</label>
+<select class="form-control" id="experience">
+<option value="Beginner">Beginner / No Experience</option>
+<option value="Intermediate">Intermediate (Know some basics)</option>
+<option value="Advanced">Advanced (Looking to upgrade skills)</option>
 </select>
 </div>
 <div class="form-group">
 <label class="form-label" for="message">Message (Optional)</label>
-<textarea class="form-control" id="message" placeholder="Any specific details?"></textarea>
+<textarea class="form-control" id="message" placeholder="What do you hope to learn?"></textarea>
 </div>
-<button class="btn btn-primary" style="width:100%;" type="submit">Send Request via WhatsApp</button>
+<button class="btn btn-primary" style="width:100%;" type="submit">Get Course Details via WhatsApp</button>
 </form>
 </div>
 </div>
@@ -1457,6 +1534,16 @@
        JAVASCRIPT
   ══════════════════════════════════════════════════════════ -->
 <script>
+    // Preloader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+          preloader.classList.add('hidden');
+        }
+      }, 1500); // 1.5 seconds minimum display time for the beautiful effect
+    });
+
     // Sticky Nav & Active Link Highlight
     const header = document.getElementById('navbar');
     const sections = document.querySelectorAll('section[id]');
@@ -1522,18 +1609,17 @@
     }, observerOptions);
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Contact Form Submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
+    // Course Form Submission
+    const courseForm = document.getElementById('courseForm');
+    if (courseForm) {
+      courseForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value;
-        const date = document.getElementById('date').value;
-        const service = document.getElementById('service').value;
+        const experience = document.getElementById('experience').value;
         const msg = document.getElementById('message').value;
 
-        const text = `Hello Radhe Beauty Care! ✨\n\nI would like to book an appointment.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Date:* ${date || 'Not specified'}\n*Service:* ${service}\n*Message:* ${msg}`;
+        const text = `Hello Radhe Beauty Academy! ✨\n\nI want to know the price and details for the Professional Beauty Parlor Course.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Experience:* ${experience}\n*Message:* ${msg}`;
         const waLink = `https://wa.me/919687417450?text=${encodeURIComponent(text)}`;
         window.open(waLink, '_blank');
       });
